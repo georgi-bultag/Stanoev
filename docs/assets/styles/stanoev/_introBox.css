@@ -1,0 +1,130 @@
+/* -------------------------- *\
+    .introBox
+\* -------------------------- */
+
+.introBox {
+	background: #F0F0F0;
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__left {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding-bottom: 3rem;
+		width: 100%;
+		
+		@mixin min 768 {
+			width: 47%;
+			height: 100%;
+			padding-bottom: 0;
+		}
+
+		span {
+			position: absolute;
+			bottom: 2.5rem;
+			left: 2.5rem;
+		}
+	}
+
+	&__right {
+		@mixin min 768 {
+			width: 44%;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		font-size: 2rem;
+		font-weight: 700;
+		color: #000;
+
+		@mixin min 768 {
+			text-align: left;
+		}
+
+		@mixin min 1191 {
+			font-size: 3rem;
+		}
+	}
+
+	.btnArea {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+
+		@mixin min 500 {
+			flex-direction: row;
+
+			.btn--red {
+				margin-left: 1rem;
+			}
+		}
+
+		@mixin min 768 {
+			flex-direction: row;
+
+			.btn--red {
+				margin-left: 0;
+			}
+		}
+		
+		.btn {
+			margin-top: 1.5rem;
+
+			&--red {
+				padding: 1.3rem 4.3rem;
+			}
+		}
+
+		@mixin min 1013 {
+			flex-direction: row;
+
+			.btn {
+				&:nth-child(2) {
+					margin-left: 1rem;
+					padding: 1.5rem 4.3rem;
+				}
+			}
+		}
+
+		@mixin min 1080 {
+			flex-direction: row;
+			justify-content: left;
+
+			.btn {
+				&:nth-child(2) {
+					margin-left: 1rem;
+				}
+			}
+		}
+	}
+
+	img {
+		@mixin min 768 {
+			object-fit: cover;
+			min-width: 100%;
+			min-height: 100%;
+		} 	
+	}
+
+	p {
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #000;
+		padding-top: 3rem;
+		line-height: 1.6rem;
+
+		&:nth-child(3){
+			padding-top: 0;
+		}
+	}
+}

@@ -1,0 +1,92 @@
+/* -------------------------- *\
+    .containers
+\* -------------------------- */
+
+.containers {
+	@mixin min 768 {
+		padding: 0;
+	}
+
+	.shell {
+		/*width: 100%;*/
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: column;
+
+		@mixin min 768 {
+			flex-direction: row;
+		}
+	}
+
+	&__item {
+		position: relative;
+		/*flex-direction: row;*/
+		display: flex;
+		background: #858585;
+		height: 37.5rem;
+		margin: 0;
+		align-items: flex-end;
+		overflow: hidden;
+
+
+		@mixin min 768 {
+			width: calc(100% / 3)
+		}
+
+		img {
+			position: absolute;
+			object-fit: cover;
+			min-width: 100%;
+			min-height: 100%;
+			top: 0;
+			@mixin tra;
+		}
+
+		&:after {
+			position: absolute;
+			content:'';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100rem;
+			z-index: 5;
+		}
+
+		&:hover {
+			opacity: .9;
+
+			img {
+				transform: scale(1.1);
+			}
+
+			p {
+				color: #fff;
+			}
+		}
+
+		span {
+			position: absolute;
+			left: 3rem;
+			color: #404040;
+		}
+
+		a {
+			width: 100%;
+		}
+	}
+
+	p {
+		position: relative;
+		width: 100%;
+		margin: 0;
+		padding: 2rem;
+		color: #fff;
+		background-image: linear-gradient(to top, rgba(0,0,0,.4) , rgba(255,255,255,.3));
+
+		@mixin min 768 {
+			padding: 2.5rem 3rem;
+		}
+	}
+}
+

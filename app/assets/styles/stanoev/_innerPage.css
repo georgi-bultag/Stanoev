@@ -1,0 +1,48 @@
+/* -------------------------- *\
+    .innerPage
+\* -------------------------- */
+
+.innerPage {
+	padding-bottom: 6.5rem;
+
+	@mixin min 768 {
+		padding-top: 8rem;
+	}
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 400;
+		text-align: center;
+		color: #000;
+
+		@mixin min 768 {
+			width: 100%;
+			font-size: 3rem;
+		}
+	}
+
+	p {
+		text-align: center;
+		padding: 4rem 0;
+		font-size: 1.5rem;
+		font-weight: 400;
+		color: #000;
+	}
+
+	img {
+		object-fit: cover;
+		min-width: 100%;
+		min-height: 100%;
+	}
+
+	&__video {
+		width: 69rem;
+		height: 39rem;
+	}
+}

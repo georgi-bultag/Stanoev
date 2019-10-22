@@ -1,0 +1,1 @@
+jQuery(document).ready(function(e){e(".triger").click(function(){e(this).parent().toggleClass("menu-item-has-children--expanded")}),e(document).ready(function(){e(".main-carousel").flickity({wrapAround:!0,autoPlay:3500,pageDots:!0,prevNextButtons:!0})})});

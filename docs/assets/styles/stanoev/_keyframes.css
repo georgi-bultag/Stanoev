@@ -1,0 +1,43 @@
+/* -------------------------- *\
+    .keyframes
+\* -------------------------- */
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes bubbles {
+    from {transform: translateY(-.9rem);}
+    to {transform: translateY(.9rem);}
+}
+
+@keyframes scale {
+    from {transform: scale(.9);}
+    to {transform: scale(1.20);}
+}
+
+@keyframes scale2 {
+    from {transform: scale(.9);}
+    to {transform: scale(1.1);}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+@keyframes sr {
+	from {transform: rotate(-5deg);}
+	to {transform: rotate(5deg);}
+}
+
+@keyframes shake {	
+    from {transform: rotate(1deg);}
+    to {transform: rotate(-1deg);}
+}
+
+@keyframes pulse {
+    from {box-shadow: 0 0 3rem rgba(0,0,0,.1);}
+    to {box-shadow: 0 0 1rem rgba(0,0,0,.1);}
+}

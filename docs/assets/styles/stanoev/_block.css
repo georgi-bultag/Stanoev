@@ -1,0 +1,284 @@
+/* -------------------------- *\
+    .photography
+\* -------------------------- */
+
+.photography {
+	padding-top: 4rem; 
+
+	@mixin min 768 {
+		padding-top: 6.5rem;
+	}
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	&__left {
+		order: 2;
+		display: flex;
+		flex-direction: column;
+
+		.title {
+			/*text-transform: uppercase;*/
+		}
+
+		@mixin min 768 {
+			order: 1;
+			width: 46%;
+		}
+
+		img {
+			text-align: center;
+			margin-bottom: 1.8rem;
+
+			@mixin min 768 {
+				margin-right: 6rem;
+				animation-name: scale;
+            	animation-duration: 10s;
+            	animation-iteration-count: infinite;
+            	animation-direction: alternate;
+			}
+		}		
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		padding-bottom: 4rem;
+		align-items: center;
+
+		@mixin min 1024 {
+			padding-bottom: 2.6rem;
+			flex-direction: row;
+		}
+
+		&--large {
+			padding-bottom: 4rem;
+		}
+	}
+
+	&__right {
+		position: relative;
+		order: 1;
+		padding-bottom: 4rem;
+		align-items: center;
+		margin: auto;
+		padding: 0;
+		margin-bottom: 4rem;
+
+		@mixin min 768 {
+			margin: 0;
+			order: 2;
+			width: 49%;
+			padding: 0;
+		}
+
+		&--sSmall {
+			@mixin min 768 {
+				width: 37%;
+			}
+		}
+
+		&--contentImg {
+			position: static;
+
+			@mixin min 1024 {
+				width: 70%;
+				height: 100%;
+				padding-left: 2rem;
+				z-index: 5;
+			}
+
+			img {
+				width: 100%;
+				object-fit: cover;
+
+				@mixin min 1024 {
+					position: relative;
+					z-index: 10;
+					object-position: 60% 50%;
+					min-width: 100%;
+					min-height: 100%;
+				}
+			}
+		}
+
+		&--contentImgSmall {
+			@mixin min 1024 {
+				position: relative;
+				left: 2.5rem;
+			}
+		}
+
+		&--darkLogo {
+			position: static;
+			background: #000;
+			width: 99.9%;
+
+			@mixin min 1024 {
+				position: absolute;
+				top: 0;
+				left: 0;
+				margin-top: 2rem;
+				width: 100%;
+				height: 31rem;
+				transform: rotate(0);
+				animation-name: shake;
+            	animation-duration: 12s;
+            	animation-iteration-count: infinite;
+            	animation-direction: alternate;
+			}
+
+			img {
+				position: relative;
+				transform: translateX(-50%);
+				transform: rotate(-90deg);
+				/*position: relative;*/
+				left: 40%;
+				object-fit: cover;
+				min-height: 100%;
+				width: 20%;
+
+				@mixin min 1024 {
+					position: absolute;
+					width: auto;
+					left: 75%;
+					background: #000;
+					padding: 4rem 1.5rem 4rem 0;
+					height: 100%;
+					transform: translateX(0);
+					transform: rotate(0);
+				}
+
+				@mixin min 1140 {
+					padding: 4rem 3.5rem 4rem 0;
+				}
+			}
+		}
+
+		a {
+			position: absolute;
+			text-transform: uppercase;
+			font-size: 1.5rem;
+			font-weight: 400;
+			color: #fff;
+			bottom: 1rem;
+			left: 50%;
+			transform: translateX(-50%);
+			@mixin tra;
+
+			@mixin min 1024 {
+				right: 2.5rem;
+				bottom: 0;
+				left: auto;
+				transform: translateX(0);
+				color: #000;
+			}
+
+			@mixin min 1075 {
+				bottom: 1.3rem;
+			}
+
+			@mixin min 1105 {
+				right: 3.5rem;
+				bottom: 2.5rem;
+			}
+
+			@mixin min 1200 {
+				bottom: 4rem;
+			}
+
+			&:hover {
+				color: #dc0000;
+				text-shadow: 0 0 .9rem rgba(220,0,0,.3);
+			}
+		}
+	}
+
+	p {
+		font-family: 'Font Awesome 5 Pro';
+		padding-top: 1.8rem;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 1.8rem;
+		letter-spacing: .01rem;
+	}
+
+	.pLow {
+		font-family: 'Font Awesome 5 Pro';
+		padding-top: 0;
+		font-size: 1.5rem;
+		font-weight: 300;
+		line-height: 1.8rem;
+		letter-spacing: .01rem;
+	}
+
+	.link {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&:hover {
+			.btn__arrowSign {
+				transform: rotate(360deg);
+			}
+		}
+
+		@mixin min 768 {
+			justify-content: flex-start;
+		}
+
+		&--red {
+			color: rgba(231, 47, 47, 1);
+			text-transform: uppercase;
+			font-size: 2rem;
+			font-weight: 700;
+			bottom: 7rem;
+			
+			@mixin min 768 {
+				right: 3rem;
+				bottom: 7rem;
+			}
+
+			@mixin min 888 {
+				width: 80%;
+				top: 0;
+				right: 2rem;
+				justify-content: flex-end;
+			}
+			@mixin min 1024 {
+				top: 2rem;
+				right: 6rem;
+			}
+
+			@mixin min 1100 {
+				right: 8rem;
+			}
+
+			@mixin min 1200 {
+				right: 12rem;
+				width: 100%;
+			}
+		}
+	}
+
+	.sTitle {
+
+		img {
+			margin: 0;
+			padding: 0;
+			margin: 0 1rem .5rem 0;
+			
+			@mixin min 768 {
+				animation-name: rotate;
+            	animation-duration: 3s;
+            	animation-iteration-count: infinite;
+			}
+		}		
+	}
+}
+

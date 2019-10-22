@@ -1,0 +1,89 @@
+/* -------------------------- *\
+    .tech
+\* -------------------------- */
+
+.tech {
+	padding-top: 4rem;
+
+	@mixin min 768 {
+		padding-top: 9.5rem;
+		padding-bottom: 0;
+	}
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		flex-direction: row;
+		padding: 0 2rem;
+	}
+
+	&__item {
+		flex-direction: column;
+		padding-bottom: 4rem;
+		width: 100%;
+		@mixin tra;
+
+		&:hover {
+			opacity: .75;
+		}
+
+		@mixin min 768 {
+			width: 48%;
+			padding-bottom: 3rem;
+			display: flex;
+			align-items: center;
+		}
+
+		@mixin min 1024 {
+			width: 22%;
+			padding-bottom: 0;
+		}
+
+		&--left {
+			overflow: hidden;
+			height: 22rem;
+			padding: 0;
+			@mixin tra;
+
+			@mixin min 768 {
+				width: 100%;
+			}
+
+			@mixin min 1024 {
+				width: 23.5rem;
+			}
+
+			img {
+				object-fit: cover;
+				top: 0;
+				left: 0;
+				min-width: 100%;
+				min-height: 100%;
+				@mixin tra;
+			}
+		}
+
+		&--right {
+			padding: 1rem 0;
+			background: #e72f2f;
+			text-align: center;
+			font-size: 1.8rem;
+			font-weight: 400;
+			height: auto;
+
+			@mixin min 768 {
+				width: 100%;
+			}
+
+			@mixin min 1024 {
+				width: 23.5rem;
+			}
+			
+			a {
+				position: relative;
+				color: #fff;
+			}
+		}
+	}
+}

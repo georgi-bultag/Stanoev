@@ -1,0 +1,59 @@
+/* -------------------------- *\
+    .aboutMe
+\* -------------------------- */
+
+.aboutMe {
+	padding-bottom: 0;
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__frontImg {
+		width: 100%;
+		margin-bottom: 3rem;
+		@mixin tra;
+
+		@mixin min 768 {
+			width: 45%;
+			margin-bottom: 0;
+		}
+
+		&:hover {
+			opacity: .9;
+		}
+	}
+
+	&__content {
+		width: 100%;
+
+		p {
+			font-size: 1.5rem;
+		}
+
+		.title {
+			font-size: 1.5rem;
+		}
+
+		@mixin min 768 {
+			width: 48.5%;
+		}
+
+		&:hover {
+			.title--red {
+				text-shadow: 0 0 .3rem rgba(220,0,0,.2);
+				opacity: 1.0;
+    			transition: opacity .55s ease-in-out;
+			}
+		}
+	}
+
+	img {
+		object-fit: cover;
+		min-width: 100%;
+		min-height: 100%;
+		@mixin tra;
+	}
+}

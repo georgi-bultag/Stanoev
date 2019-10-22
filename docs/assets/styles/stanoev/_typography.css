@@ -1,0 +1,105 @@
+/* -------------------------- *\
+    .typography
+\* -------------------------- */
+
+.typography {
+	padding-bottom: 4rem;
+
+	@mixin min 768 {
+		padding-bottom: 13rem;
+		padding-top: 6rem;
+	}
+
+	.shell {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		/*display: flex;*/
+		padding-bottom: 5rem;
+		@mixin tra;
+
+		@mixin min 768 {
+			padding-bottom: 2.5rem;
+			width: 43%;
+		}
+
+		&:nth-child(5){
+			padding-bottom: 0;
+
+			@mixin min 768 {
+				padding-bottom: auto;
+			}
+		}
+
+		&:nth-child(4){
+			padding-bottom: 9rem;
+		}
+
+		&:hover {
+			.title--red {
+				text-shadow: 0 0 .3rem rgba(220,0,0,.2);
+				opacity: 1.0;
+    			transition: opacity .55s ease-in-out;
+			}
+
+			img {
+				box-shadow: 0 0 .3rem rgba(0,0,0,.3);
+				opacity: .9;
+			}
+		}
+	}
+
+	.title {
+		text-align: center;
+
+		@mixin min 768 {
+			text-align: left;
+		}
+	}
+
+	p {
+		padding-top: 2.5rem;
+		font-size: 1.5rem;
+		color: #000;
+	}
+
+	img {
+		object-fit: cover;
+		min-width: 100%;
+		min-height: 100%;
+		width: 100%;
+		border-radius: 1rem;
+		box-shadow: 0 0 .3rem rgba(0,0,0,.3);
+		opacity: 1;
+		@mixin tra;
+
+		@mixin min 768 {
+			width: 48rem;
+			height: 34.5rem;
+		}
+	}
+
+	span {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		font-family: 'Philosopher', sans-serif;
+		font-size: 9rem;
+		color: #e72f2f;
+		text-shadow: 0 0 .3rem rgba(231,47,47,.3);
+		animation-name: sr;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+
+		@mixin min 768 {
+			width: auto;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+}

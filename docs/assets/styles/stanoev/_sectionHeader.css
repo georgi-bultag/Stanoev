@@ -1,0 +1,83 @@
+/* -------------------------- *\
+    .sectionHeader
+\* -------------------------- */
+
+.sectionHeader {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	/*padding-bottom: 0;*/
+	margin-bottom: -4rem;
+
+	&__title {
+		font-family: 'Lora', serif;
+		font-size: 2.4rem;
+		font-weight: 400;
+		letter-spacing: .07rem;
+		margin-bottom: 1rem;
+
+		@mixin min 768 {
+			font-size: 1.785em;
+			margin-bottom: 3.1rem;
+		}
+	}
+
+	p {
+		font-size: 1.7rem;
+		font-weight: 300;
+		margin-bottom: 0;
+		padding-bottom: .5rem;
+	}
+
+	&__sdivider {
+		position: relative;
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: .3rem;
+			right: 3rem;
+			width: 500%;
+			height: .2rem;
+			box-shadow: 0 .7rem 0 0 rgba(231,47,47,100);
+
+			@mixin min 768 {
+				top: .3rem;
+				width: 1100%;
+				right: 4.5rem;
+			}
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			top: .3rem;
+			left: 3rem;
+			height: .2rem;
+			width: 500%;
+			box-shadow: 0 .7rem 0 0 rgba(231,47,47,100);
+
+			@mixin min 768 {
+				left: 4.3rem;
+				width: 1100%;
+			}
+		}
+
+		img {
+			width: 1.5rem;
+			height: 2rem;
+		}
+	}
+
+	&--small {
+		padding-top: 5rem;
+	}
+
+	&--mobile {
+		padding-top: 0;
+
+		@mixin min 768 {
+			padding-top: 2rem;
+		}
+	}
+}

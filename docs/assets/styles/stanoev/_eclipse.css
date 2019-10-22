@@ -1,0 +1,84 @@
+/* -------------------------- *\
+    .eclipse
+\* -------------------------- */
+
+.eclipse {
+	padding: 0;
+
+	&:hover {
+		.eclipse__img {
+			transform: rotate(360deg) scale(1.15);
+
+		}
+	}
+
+	.shell {
+		width: 75%;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+		border-top: .2rem solid rgba(220,0,0);
+		border-bottom: .2rem solid rgba(220,0,0);
+
+		@mixin min 768 {
+			justify-content: flex-start;
+		}
+	}
+
+	&__item {
+		@mixin min 768 {
+			padding: 2rem 0;
+			width: 60%;
+		}
+
+		@mixin min 1024 {
+			width: 75%;
+		}
+
+		p {
+			padding-top: 1rem;
+			font-size: 1.5rem;
+			font-weight: 400;
+			color: #000;
+
+			@mixin min 768 {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__title {
+		font-size: 2rem;
+		font-weight: 700;
+		color: #000;
+		text-align: center;
+
+		@mixin min 768 {
+			text-align: left;
+		}
+	}
+
+	&__img {
+		justify-content: center;
+		width: 12.5rem;
+		height: 12.5rem;
+		margin: 2rem 4rem;
+		@mixin tra;
+
+		@mixin min 768 {
+			margin: 1rem 2rem;
+		}
+
+		@mixin min 1200 {
+			margin: 2rem 4rem;
+		}
+
+		img {
+			object-fit: cover;
+			min-width: 100%;
+			min-height: 100%;
+			border-radius: 50% 50%;
+		}
+	}
+}

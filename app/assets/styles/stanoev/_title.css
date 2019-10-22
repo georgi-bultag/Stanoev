@@ -1,0 +1,26 @@
+/* -------------------------- *\
+    .title
+\* -------------------------- */
+
+.title {
+	font-size: 2rem;
+	font-weight: 300;
+	margin-bottom: 0;
+	/*letter-spacing: .01rem;*/
+
+	&--philosopher {
+		font-family: 'Philosopher', sans-serif;
+	}
+
+	&--up {
+		text-transform: uppercase;
+	}
+
+	&--red {
+		font-weight: 700;
+		color: #e72f2f;
+		text-transform: uppercase;
+		opacity: .9;
+		@mixin tra;
+	}
+}
